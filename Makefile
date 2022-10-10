@@ -12,3 +12,5 @@ main: main.o function.o
 	$(CC) -o $@ main.o function.o $(CFLAGS)
 clean:
 	rm -rf *.o
+
+#token: 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
