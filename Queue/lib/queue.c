@@ -1,17 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "queue.h"
 
 /*Program to test basic queue(FIFO) using array implementation */
-
-struct Queue
-{
-    int front,rear,size;
-    unsigned int capacity;
-    int *array;
-};
-
-typedef struct Queue Queue;
-
 Queue* createQueue(unsigned int capacity)
 {
     Queue *queue = (Queue *)malloc(sizeof(Queue));
@@ -61,13 +52,3 @@ int rear(Queue *queue)
     return queue->array[queue->rear];
 }
 
-void main()
-{
-    Queue *queue = createQueue(5);
-    Enqueue(queue,1);
-    Enqueue(queue,2);
-    Enqueue(queue,3);
-    printf("Dequeue: %d \n",Dequeue(queue));
-    printf("Front: %d\n",front(queue));
-    printf("Rear: %d\n",rear(queue));
-}
